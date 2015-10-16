@@ -2,6 +2,6 @@
 
 rm -f env
 
-set | grep -i twitter=>env
+set | grep -i twitter > env
 
-docker-compose up
+docker-compose build && docker-compose up

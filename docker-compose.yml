@@ -1,0 +1,36 @@
+mirage_app:
+  build: ./mirage
+  links:
+    - redis
+    - mongo
+  ports:
+    - 8001:8001
+
+twitter_proxy:
+  build: ./twitter-proxy
+  environment:
+    MirageEndpoint: http://mirage_app:8001
+    RedisAddress: redis:6379
+    ExternalSystem: https://api.twitter.com
+  links:
+   - redis
+   - mirage_app
+  ports:
+    - 8300:8300
+
+twitter_app:
+  build: ./twitter-app
+  environment:
+    MirageProxyAddress: http://twitter_proxy:8300
+  env_file:
+    - env
+  links:
+    - twitter_proxy
+  ports:
+    - 8080:8080
+
+redis:
+  image: redis
+
+mongo:
+  image: mongo

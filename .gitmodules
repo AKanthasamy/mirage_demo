@@ -1,0 +1,9 @@
+[submodule "mirage"]
+	path = mirage
+	url = https://github.com/SpectoLabs/mirage
+[submodule "twitter-proxy"]
+	path = twitter-proxy
+	url = https://github.com/SpectoLabs/twitter-proxy
+[submodule "twitter-app"]
+	path = twitter-app
+	url = https://github.com/SpectoLabs/twitter-app

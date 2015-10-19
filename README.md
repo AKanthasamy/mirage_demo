@@ -2,7 +2,7 @@
 
 The docker-compose script in this repo builds a demo environment consisting of the Mirage application, a demo application and a proxy for the demo application.
 
-## Instructions
+## Installation
 
 You need Docker and docker-compose, and a Twitter API key pair.
 
@@ -43,3 +43,29 @@ To update the mirage, twitter-app and twitter-proxy modules:
 ```bash
 git submodule foreach git pull origin master
 ```
+
+## Usage
+
+Twitter app: Set "External API URI" to Twitter, enter search term and click "Submit"
+
+Mirage: Create scenario and session
+
+Twitter proxy: Set to record
+
+Twitter app: Set "External API URI" to Mirage Proxy
+
+Twitter app: Enter scenario:session
+
+Twitter app: Enter search term and click Submit
+
+Mirage app: View tracker collection page
+
+Mirage: set session to playback
+
+Twitter proxy: set to playback
+
+Kill WIFI
+
+Twitter app: Enter search term
+
+Twitter app should return recorded responses. 

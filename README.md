@@ -1,6 +1,8 @@
 # Mirage Demo
 
-This demo shows how Mirage can "record" how a third-party service responds to an application, and then mimic the third-party service by "playing back" the recorded responses.
+This demo shows how [Mirage](https://github.com/SpectoLabs/mirage) can "record" how a third-party service responds to an application, and then mimic the third-party service by "playing back" the recorded responses.
+
+Please refer to the [Mirage documentation](https://github.com/SpectoLabs/mirage/wiki) for more information. The [Introduction](https://github.com/SpectoLabs/mirage/wiki/Introduction) is a good place to start.
 
 ## Installation
 

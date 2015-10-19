@@ -72,7 +72,7 @@ The Twitter Search application is calling the real Twitter search API, which ret
 
 Next, we will configure Mirage to record how the Twitter search API responds when the Twitter Search application calls it.
 
-In the Mirage management UI, first we need to check the "Tracking all hosts" box in the top left. Please don't ask why. Then we navigate to Management > Scenarios and click the "Add a new scenario" button.
+In the Mirage management UI, navigate to Management > Scenarios and click the "Add a new scenario" button.
 
 You can find more information on [sessions and scenarios in the Mirage docs](https://github.com/SpectoLabs/mirage/wiki/Glossary).
 

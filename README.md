@@ -76,11 +76,13 @@ Next you need to configure Mirage to record the Twitter search API responses.
 
 In the Mirage management UI, navigate to **Management > Scenarios** and click the **Add a new scenario** button.
 
+Enter "mirage_app:demo" under **Scenario name** and "test" under **Session name**.
+
 You can find more information on [sessions and scenarios in the Mirage docs](https://github.com/SpectoLabs/mirage/wiki/Glossary).
 
-![demo_mirage_add_new_scenario](https://storage.googleapis.com/specto-wiki-img/demo_mirage_add_new_scenario.png)
-
 Check the **Start session in record mode...** box so that when you click the "Submit" button, Mirage is ready to record.
+
+![demo_mirage_add_new_scenario](https://storage.googleapis.com/specto-wiki-img/demo_mirage_add_new_scenario.png)
 
 ![demo_mirage_view_session_record](https://storage.googleapis.com/specto-wiki-img/demo_mirage_view_session_record.png)  
 
@@ -92,7 +94,7 @@ The proxy can be set to either record or playback. By default, it is in record m
 
 ![demo_proxy_record_mode](https://storage.googleapis.com/specto-wiki-img/demo_proxy_record_mode.png)
 
-Return to Twitter Search application and select **Mirage Proxy** in the **External API URI** drop-down. Enter the name of the scenario and session that you set up in the Mirage management UI and submit a search term. The response is still coming from the real Twitter search API, but it is being routed through the proxy.
+Return to Twitter Search application and select **Mirage Proxy** in the **External API URI** drop-down. Enter "demo:test" in the **scenario:session** field and submit a search term. The response is still coming from the real Twitter search API, but it is being routed through the proxy.
 
 ![demo_twitter_search_proxy](https://storage.googleapis.com/specto-wiki-img/demo_twitter_search_proxy.png)
 

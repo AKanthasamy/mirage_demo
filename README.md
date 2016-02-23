@@ -25,7 +25,7 @@ git clone https://github.com/SpectoLabs/mirage_demo.git && cd mirage_demo
 Get the applications:
 
 ```bash
-git submodule init && git submodule update
+git submodule update --init
 ```
 
 Launch:
@@ -45,7 +45,7 @@ Proxy application: http://{docker-host-ip}:8300/admin
 To update the applications from their upstream repositories:
 
 ```bash
-git submodule foreach git pull origin master
+git submodule update --init --remote
 ```
 
 ## Usage

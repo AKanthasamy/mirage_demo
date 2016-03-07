@@ -5,6 +5,11 @@ mirage_app:
     - mongo
   ports:
     - 8001:8001
+  environment:
+    REDIS_ADDRESS: redis
+    REDIS_PORT: 6379
+    MONGO_URI: mongodb://mongo:27017/stubodb
+    MONGO_DB: stubodb
 
 twitter_proxy:
   build: ./twitter-proxy

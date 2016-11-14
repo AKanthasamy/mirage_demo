@@ -4,9 +4,21 @@ This demo shows how [Mirage](https://github.com/SpectoLabs/mirage) can "record" 
 
 Please refer to the [Mirage documentation](https://github.com/SpectoLabs/mirage/wiki) for more information. The [introduction](https://github.com/SpectoLabs/mirage/wiki/Introduction) is a good place to start.
 
+## Demo Structure
+
+This demo is comprised of 3 main parts (4 if you count the dependency, in this case api.twitter.com):
+
+- The Mirage server, on [http://localhost:8001](http://localhost:8001)
+- The Twitter App, on [http://localhost:8080](http://localhost:8080)
+- The Twitter Proxy, on [http://localhost:8300/admin](http://localhost:8300/admin)
+
+![basic_arch](http://i.imgur.com/yrzXYhq.png)
+
+It's actually more complicated if you count in Redis, Mongo etc. let us not forget it's all wrapped inside docker too. But for now these are the parts we shall be working with.
+
 ## Installation
 
-> This instructions are for OSX and Linux only at the moment as Docker Compose is not yet available for Windows. There is an [open issue](https://github.com/SpectoLabs/mirage_demo/issues/3) to add a Vagrantfile which will allow Windows users to run the demo applications.
+> These instructions are for OSX and Linux only at the moment as Docker Compose is not yet available for Windows. There is an [open issue](https://github.com/SpectoLabs/mirage_demo/issues/3) to add a Vagrantfile which will allow Windows users to run the demo applications.
 
 You need Docker, Docker Compose and a Twitter API key pair. OSX users can download the [Docker Toolbox](https://www.docker.com/toolbox).
 
